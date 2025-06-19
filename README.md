@@ -7,11 +7,11 @@ Instead of FAST API, a possible alternative could be experimenting with Streamli
 
 ### Missed Edge Cases
 
-Apparently, this code wouldn't run and throw error if in case the Excel file is empty, which is highly unlikely. In the application code, a couple of endpoints don't provide the exact intended JSON output for some cases. The 1st endpoint list_tables, fails to extract the name of the table 'BOOK VALUE & DEPRECIATION' since in the header row it appears distorted and not of standard type, unlike other tables. On the other hand, the row_sum endpoint only returns the numerical value from the next corresponding column if a selected table and row name contains numbers in more than 1 column cell. Instead, the 'sum' key in the structure of the JSON response would be equal to this value. This issue can be detected by inputting the table name 'OPERATING CASHFLOWS' and any of the row names by testing the endpoint using the POSTMAN app. Other than these scenarios, the code would run normally based on the assumption that tables exist along with their numeric records and would return JSON responses based on the input query parameters. 
+Apparently, this code wouldn't run and throw an error if in case the Excel file is empty, which is highly unlikely. In the application code, a couple of endpoints don't provide the exact intended JSON output for some cases. The 1st endpoint list_tables, fails to extract the name of the table 'BOOK VALUE & DEPRECIATION' since in the header row it appears distorted and not of standard type, unlike other tables. On the other hand, the row_sum endpoint only returns the numerical value from the next corresponding column if a selected table and row name contains numbers in more than 1 column cell. Instead, the 'sum' key in the structure of the JSON response would be equal to this value. This issue can be detected by inputting the table name 'OPERATING CASHFLOWS' and any of the row names by testing the endpoint using the POSTMAN app. Other than these scenarios, the code would run normally based on the assumption that tables exist along with their numeric records and would return JSON responses based on the input query parameters. 
 
 ### Testing
 
-First go to in a terminal window and change the directory to The FAST API application 'main.py'. 
+First go to in a terminal window and change the file path to the directory of the FAST API application file 'main.py'. 
 ```
 cd [directory of app file]
 ```
