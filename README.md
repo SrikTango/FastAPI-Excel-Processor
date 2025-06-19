@@ -24,6 +24,11 @@ uvicorn main:app --host localhost --port 9090 --reload
 The following URLS for the 3 endpoints can be tested for checking ouputs:
 
 *   **Base URL:**
+
+`http://localhost:9090`
+
+*   **Endpoints URL:**
+
 `http://localhost:9090/list_tables`
 
 `http://localhost:9090/get_table_details`
